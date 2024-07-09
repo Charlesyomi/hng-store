@@ -13,11 +13,11 @@ import accessoriesIcon from "/public/icons/prod-cat-access.svg";
 import Image from "next/image";
 
 const categories = [
-  { name: "Mobile", icon: mobilePhoneIcon, href: "/category/mobile" },
-  { name: "Laptop", icon: pcIcon, href: "/category/laptop" },
-  { name: "Accessories", icon: accessoriesIcon, href: "/category/accessories" },
-  { name: "Tablet", icon: mobilePhoneIcon, href: "/category/tablet" },
-  { name: "Camera", icon: cameraIcon, href: "/category/camera" },
+  { name: "Mobile", icon: mobilePhoneIcon, href: "/products/mobile" },
+  { name: "Laptop", icon: pcIcon, href: "/products/laptop" },
+  { name: "Accessories", icon: accessoriesIcon, href: "/products/accessories" },
+  { name: "Tablet", icon: mobilePhoneIcon, href: "/products/tablet" },
+  { name: "Camera", icon: cameraIcon, href: "/products/camera" },
 ];
 
 const CategoryNav = () => {
