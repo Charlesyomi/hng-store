@@ -1,11 +1,16 @@
 "use client";
 
+import { Metadata } from "next";
 // pages/cart.tsx
 
 import CartProgressIndicator from "./components/CartProgressIndicator";
 import PaymentDetails from "./components/PaymentDetails";
 import ProductCheckoutCard from "./components/ProductCheckoutCard";
 import styles from "./styles/CartPage.module.css";
+
+// export const metadata: Metadata = {
+//   title: "ShoppingCart",
+// };
 
 const steps = [
   { key: "cart", label: "Cart", icon: "🛒" },

@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import styles from "./styles/Layout.module.css";
 import Footer from "./components/Footer";
+
+export const metadata: Metadata = {
+  title: "Products",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{

@@ -1,0 +1,23 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.checkoutContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+@media screen and (min-width: 900px) {
+  .checkoutContent {
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .checkoutContent > * {
+    flex: 1;
+  }
+}
