@@ -1,0 +1,38 @@
+/* components/Pagination.module.css */
+
+.pagination {
+  /* margin-inline: auto; */
+  margin-block: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.pageNumber,
+.arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.pageNumber.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.arrow {
+  font-weight: bold;
+}
+
+.arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ellipsis {
+  font-size: 16px;
+}

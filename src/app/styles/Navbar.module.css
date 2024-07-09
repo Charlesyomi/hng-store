@@ -1,0 +1,112 @@
+.navbar {
+  max-width: 90rem;
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0.5rem 1rem; */
+  background-color: white;
+
+  /* border-bottom: 2px solid #6e3eff; */
+
+  /* border: 1px solid red; */
+}
+
+.logo {
+  font-weight: bold;
+  color: #6e3eff;
+  margin-right: 2rem;
+}
+
+.menuToggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100vh;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 1000;
+
+  & li {
+    margin: 1rem 0;
+  }
+
+  & ul ul {
+    margin-left: 1rem;
+  }
+}
+
+.mobileMenuHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 2rem;
+}
+
+.desktopNav {
+  display: none;
+}
+
+.navItems {
+  display: flex;
+  gap: 3rem;
+}
+
+.navItem {
+  color: #333;
+  text-decoration: none;
+}
+
+.navItem:hover {
+  color: #6e3eff;
+}
+
+.iconGroup {
+  display: flex;
+  gap: 1rem;
+  /* margin-left: auto; */
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .menuToggle {
+    display: none;
+  }
+
+  .desktopNav {
+    display: block;
+    /* display: flex;
+      gap: 1rem; */
+  }
+
+  /* .navItem {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .navItem:hover {
+    color: #6e3eff;
+  } */
+
+  .mobileMenu {
+    display: none;
+  }
+}

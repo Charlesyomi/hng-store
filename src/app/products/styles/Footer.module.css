@@ -1,0 +1,159 @@
+/* components/Footer.module.css */
+.footer {
+  /* background-color: #0a192f; */
+  color: hsla(0, 0%, 80%, 1);
+  font-size: 16px;
+
+  font-family: Arial, sans-serif;
+}
+
+.footerContainer {
+  /* padding: 20px; */
+}
+
+.topSection {
+  background: linear-gradient(180deg, #0a1a3a, #041228);
+}
+.topSectionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.column h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.column li,
+.column p {
+  margin-bottom: 5px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.signupForm {
+  display: flex;
+  margin-top: 10px;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  background-color: #2a3e60;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  flex-grow: 1;
+}
+
+.inputWrapper input {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+.submitButton {
+  background-color: #2a3e60;
+  border: none;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.chatButton {
+  background-color: #2a3e60;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.bottomSectionContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-block: 1rem;
+}
+
+.paymentMethods {
+  display: flex;
+  gap: 10px;
+  margin-top: 3rem;
+}
+
+.legalLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.legalLinks a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.bottomSection {
+  background-color: hsla(216, 93%, 11%, 1);
+}
+
+/* Media query for desktop */
+@media (min-width: 768px) {
+  .topSectionContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    padding-bottom: 0;
+  }
+
+  .column {
+    flex: 1;
+  }
+  .columnLast {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .paymentMethods {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    padding-bottom: 0;
+  }
+
+  .bottomSection {
+  }
+
+  .bottomSectionContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    padding-block: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .legalLinks {
+    justify-content: flex-end;
+  }
+}

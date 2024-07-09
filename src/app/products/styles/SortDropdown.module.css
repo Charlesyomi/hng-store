@@ -1,0 +1,57 @@
+/* components/SortDropdown.module.css */
+
+.dropdown {
+  position: relative;
+  width: 200px;
+  font-family: Arial, sans-serif;
+  margin-left: auto;
+  margin-block-end: 4rem;
+  margin-inline-end: 2rem;
+}
+
+.dropdownHeader {
+  padding: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.arrow {
+  font-size: 0.8em;
+}
+
+.dropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  list-style-type: none;
+  padding: 0;
+  margin-block-start: 0.3rem;
+  z-index: 1;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.dropdownList li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdownList li:hover {
+  background-color: #f0f0f0;
+}
+
+.selected {
+  background-color: #e6e6e6;
+}
