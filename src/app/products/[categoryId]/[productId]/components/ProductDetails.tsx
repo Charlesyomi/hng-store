@@ -119,7 +119,10 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
       </div>
 
       {/* price details */}
-      <PriceDetails {...priceData} />
+      <div className={styles.priceDetailsContainer}>
+        <PriceDetails {...priceData} />
+      </div>
+      {/* technical details */}
       <div className={styles.technicalDetails}>
         <h2 className="font-bold">Technical Details</h2>
         <table className={styles.technicalTable}>

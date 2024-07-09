@@ -16,6 +16,9 @@
   flex: 1;
 }
 
+.priceDetailsContainer {
+  order: 9;
+}
 .productName {
   font-size: 20px;
   font-weight: 600;
@@ -175,6 +178,10 @@
     gap: 4rem;
     /* justify-items: center; */
     align-items: center;
+  }
+
+  .priceDetailsContainer {
+    order: unset;
   }
 
   /* .productImage {
