@@ -6,7 +6,7 @@
   justify-items: center;
 }
 
-.productCard {
+/* .productCard {
   border: 1px solid #ddd;
   padding: 15px;
   border-radius: 8px;
@@ -40,7 +40,7 @@
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
-}
+} */
 
 .card {
   border: 1px solid #e0e0e0;
@@ -50,6 +50,7 @@
   width: 250px;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-inline: auto;
 }
 
 .discountBadge {

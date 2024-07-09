@@ -1,0 +1,104 @@
+/* components/PriceDetails.module.css */
+.container {
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  /* max-width: 300px; */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.currentPrice {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.discount {
+  background-color: #ff6b00;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.lastPrice {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.paymentOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.paymentOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.installmentLabel {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.installmentOptions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.installmentButton {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.installmentButton.selected {
+  border-color: #1a73e8;
+  color: #1a73e8;
+}
+
+.monthlyPayment {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.buyNowButton,
+.addToCartButton {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.buyNowButton {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.addToCartButton {
+  background-color: white;
+  color: #1a73e8;
+  border: 1px solid #1a73e8;
+}

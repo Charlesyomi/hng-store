@@ -3,11 +3,12 @@ import React from "react";
 import styles from "../styles/ProductGrid.module.css";
 import star from "/public/icons/star.svg";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 interface Product {
   id: string;
   name: string;
-  image: StaticImageData;
+  imageUrl: string;
   price: number;
   rating: number;
   discount: number;
@@ -17,9 +18,9 @@ interface ProductGridProps {
   products: Product[];
 }
 
-const ProductCard: React.FC<Product> = ({
+export const ProductCard: React.FC<Product> = ({
   name,
-  image,
+  imageUrl,
   price,
   rating,
   discount,
@@ -27,33 +28,41 @@ const ProductCard: React.FC<Product> = ({
   const discountedPrice = price * (1 - discount / 100);
 
   return (
-    <div className={styles.card}>
-      {discount > 0 && <div className={styles.discountBadge}>-{discount}%</div>}
-      <Image
-        src={image}
-        alt={name}
-        width={200}
-        height={150}
-        className={styles.image}
-      />
-      <div className={styles.content}>
-        <h3 className={styles.name}>{name}</h3>
-        <div className="flex items-center justify-between">
-          <div className={styles.priceContainer}>
-            <span className={styles.price}>${discountedPrice.toFixed(2)}</span>
-            {discount > 0 && (
-              <span className={styles.originalPrice}>${price.toFixed(2)}</span>
-            )}
-          </div>
-          <div className={styles.rating}>
-            <span className={styles.stars}>
-              <Image alt="" src={star} />
-            </span>
-            <span className={styles.ratingValue}>{rating.toFixed(1)}</span>
+    <Link href={`/products/laptop/${name}`}>
+      <div className={styles.card}>
+        {discount > 0 && (
+          <div className={styles.discountBadge}>-{discount}%</div>
+        )}
+        <Image
+          src={imageUrl}
+          alt={name}
+          width={200}
+          height={150}
+          className={styles.image}
+        />
+        <div className={styles.content}>
+          <h3 className={styles.name}>{name}</h3>
+          <div className="flex items-center justify-between">
+            <div className={styles.priceContainer}>
+              <span className={styles.price}>
+                ${discountedPrice.toFixed(2)}
+              </span>
+              {discount > 0 && (
+                <span className={styles.originalPrice}>
+                  ${price.toFixed(2)}
+                </span>
+              )}
+            </div>
+            <div className={styles.rating}>
+              <span className={styles.stars}>
+                <Image alt="" src={star} />
+              </span>
+              <span className={styles.ratingValue}>{rating.toFixed(1)}</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

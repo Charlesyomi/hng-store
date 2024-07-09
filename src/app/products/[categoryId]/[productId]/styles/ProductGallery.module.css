@@ -1,0 +1,40 @@
+.productGallery {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mainImage {
+  margin-bottom: 1rem;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  transition: border-color 0.3s ease;
+}
+
+.thumbnail:hover,
+.thumbnail:focus {
+  border-color: #999;
+}
+
+.thumbnail.selected {
+  border-color: #333;
+}
+
+@media (max-width: 768px) {
+  .thumbnails {
+    justify-content: center;
+  }
+}

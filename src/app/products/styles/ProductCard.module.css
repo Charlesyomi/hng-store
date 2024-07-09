@@ -1,0 +1,160 @@
+/* components/ProductCard.module.css */
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  width: 300px;
+  position: relative;
+  transition: all 0.3s ease;
+  height: 350px;
+
+  /* new */
+  overflow: hidden;
+}
+
+/*  */
+.hoverContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .content {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.card:hover .hoverContent {
+  transform: translateY(-20px);
+}
+/*  */
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* .image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+} */
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.content {
+  margin-top: 12px;
+}
+.name {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 0.1rem;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.originalPrice {
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: #7f8c8d;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stars {
+  color: #f1c40f;
+}
+
+.ratingValue {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* .name {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.discountTag {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 8px;
+}
+
+.discountedPrice {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.rating {
+  color: #ffa41c;
+  font-size: 14px;
+} */
+
+.hoverContent {
+  /* margin-block-start: 2rem; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.addToCart,
+.favoriteButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addToCart {
+  background-color: #0070f3;
+  color: white;
+  flex-grow: 1;
+  margin-right: 8px;
+}
+
+.favoriteButton {
+  background-color: transparent;
+  border: 1px solid #0070f3;
+  color: #0070f3;
+}

@@ -7,6 +7,7 @@ import SortDropdown from "../components/SortDropdown";
 import Pagination from "../components/Pagination";
 import { useState } from "react";
 import FeatureIcons from "../components/FeatureIcons";
+import CategoryNav from "../components/CategoryNav";
 
 interface Params {
   categoryId: string;
@@ -19,7 +20,7 @@ interface PageProps {
 const productSample = {
   id: "",
   name: "MacBook 1",
-  image: productImageTest,
+  imageUrl: "/productImages/image.png",
   price: 45,
   rating: 4.6,
   discount: 25,
@@ -44,7 +45,8 @@ const Page: NextPage<PageProps> = ({ params }) => {
   };
   return (
     <div>
-      {params.categoryId}
+      {/* {params.categoryId} */}
+      <CategoryNav />
       <SortDropdown />
       <ProductGrid products={generateSampleArray(30, productSample)} />
 
