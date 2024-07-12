@@ -174,7 +174,8 @@
     align-items: stretch;
     justify-content:unset;
   }
-  .addToCart{
+  .addToCart,
+  .favoriteButton{
     font-size:12px;
     padding: 4px 6px;
   }
