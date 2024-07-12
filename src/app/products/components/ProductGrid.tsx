@@ -58,7 +58,7 @@ export const ProductCard: React.FC<Product> = ({
 
       <div className={styles.hoverContent}>
         <button className={styles.addToCart}>
-          <Link href="/cart">Add to cart</Link>
+          <Link href={`/products/laptop/${name}`}>Add to cart</Link>
         </button>
         <button className={styles.favoriteButton}>♡</button>
       </div>

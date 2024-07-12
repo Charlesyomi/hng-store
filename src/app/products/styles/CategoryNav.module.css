@@ -18,6 +18,10 @@
   padding: 0.3rem;
 }
 
+.activeCategoryLink {
+  border-bottom: 4px solid #6e3eff;
+}
+
 .categoryIcon {
   font-size: 24px;
   margin-bottom: 5px;

@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "../styles/CategoryNav.module.css";
 import Link from "next/link";
 
@@ -11,6 +13,7 @@ import gameIcon from "/public/icons/prod-cat-game.svg";
 import networkingIcon from "/public/icons/prod-cat-networking.svg";
 import accessoriesIcon from "/public/icons/prod-cat-access.svg";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const categories = [
   { name: "Mobile", icon: mobilePhoneIcon, href: "/products/mobile" },
@@ -20,25 +23,31 @@ const categories = [
   { name: "Camera", icon: cameraIcon, href: "/products/camera" },
 ];
 
+interface NavLinkProps {
+  href: string;
+  name: string;
+  icon: string;
+}
+const NavLink: React.FC<NavLinkProps> = ({ href, name, icon }) => {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+
+  return (
+    <Link key={name} href={href} className={styles.categoryLink}>
+      <span>
+        <Image alt="" src={icon} className={styles.categoryIcon} />
+      </span>
+      <span className={styles.categoryName}>{name}</span>
+    </Link>
+  );
+};
+
 const CategoryNav = () => {
   return (
     <div>
       <nav className={styles.categoryNav}>
         {categories.map((category) => (
-          <Link
-            key={category.name}
-            href={category.href}
-            className={styles.categoryLink}
-          >
-            <span>
-              <Image
-                alt=""
-                src={category.icon}
-                className={styles.categoryIcon}
-              />
-            </span>
-            <span className={styles.categoryName}>{category.name}</span>
-          </Link>
+          <NavLink key={category.name} {...category} />
         ))}
       </nav>
     </div>
