@@ -24,6 +24,7 @@ import gameIcon from "/public/icons/prod-cat-game.svg";
 import networkingIcon from "/public/icons/prod-cat-networking.svg";
 import accessoriesIcon from "/public/icons/prod-cat-access.svg";
 import dropDown from "/public/icons/dropdown.svg";
+import Link from "next/link";
 
 const products = [
   {
@@ -112,21 +113,21 @@ const Navbar: React.FC = () => {
         />
         <div className={styles.desktopNav}>
           <div className={styles.navItems}>
-            <a href="#" className={styles.navItem}>
+            <Link href="#" className={styles.navItem}>
               Home
-            </a>
-            <a href="#" className={styles.navItem}>
+            </Link>
+            <Link href="/products" className={styles.navItem}>
               Products
-            </a>
-            <a href="#" className={styles.navItem}>
+            </Link>
+            <Link href="#" className={styles.navItem}>
               Blog
-            </a>
-            <a href="#" className={styles.navItem}>
+            </Link>
+            <Link href="#" className={styles.navItem}>
               FAQ
-            </a>
-            <a href="#" className={styles.navItem}>
+            </Link>
+            <Link href="#" className={styles.navItem}>
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -140,7 +141,9 @@ const Navbar: React.FC = () => {
             />
           </span>
           <span className={styles.icon}>
-            <Image alt="cart" src={cartIcon} width={25} height={25} />
+            <Link href="/cart">
+              <Image alt="cart" src={cartIcon} width={25} height={25} />
+            </Link>
           </span>
           <span className={styles.icon}>
             <Image alt="user profile" src={userIcon} width={25} height={25} />

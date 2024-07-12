@@ -28,41 +28,42 @@ export const ProductCard: React.FC<Product> = ({
   const discountedPrice = price * (1 - discount / 100);
 
   return (
-    <Link href={`/products/laptop/${name}`}>
-      <div className={styles.card}>
-        {discount > 0 && (
-          <div className={styles.discountBadge}>-{discount}%</div>
-        )}
-        <Image
-          src={imageUrl}
-          alt={name}
-          width={200}
-          height={150}
-          className={styles.image}
-        />
-        <div className={styles.content}>
-          <h3 className={styles.name}>{name}</h3>
-          <div className="flex items-center justify-between">
-            <div className={styles.priceContainer}>
-              <span className={styles.price}>
-                ${discountedPrice.toFixed(2)}
-              </span>
-              {discount > 0 && (
-                <span className={styles.originalPrice}>
-                  ${price.toFixed(2)}
-                </span>
-              )}
-            </div>
-            <div className={styles.rating}>
-              <span className={styles.stars}>
-                <Image alt="" src={star} />
-              </span>
-              <span className={styles.ratingValue}>{rating.toFixed(1)}</span>
-            </div>
+    // <Link href={`/products/laptop/${name}`}>
+    <div className={styles.card}>
+      {discount > 0 && <div className={styles.discountBadge}>-{discount}%</div>}
+      <Image
+        src={imageUrl}
+        alt={name}
+        width={200}
+        height={150}
+        className={styles.image}
+      />
+      <div className={styles.content}>
+        <h3 className={styles.name}>{name}</h3>
+        <div className="flex items-center justify-between">
+          <div className={styles.priceContainer}>
+            <span className={styles.price}>${discountedPrice.toFixed(2)}</span>
+            {discount > 0 && (
+              <span className={styles.originalPrice}>${price.toFixed(2)}</span>
+            )}
+          </div>
+          <div className={styles.rating}>
+            <span className={styles.stars}>
+              <Image alt="" src={star} />
+            </span>
+            <span className={styles.ratingValue}>{rating.toFixed(1)}</span>
           </div>
         </div>
       </div>
-    </Link>
+
+      <div className={styles.hoverContent}>
+        <button className={styles.addToCart}>
+          <Link href="/cart">Add to cart</Link>
+        </button>
+        <button className={styles.favoriteButton}>♡</button>
+      </div>
+    </div>
+    // </Link>
   );
 };
 
