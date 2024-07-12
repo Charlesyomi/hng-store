@@ -166,4 +166,8 @@
   .card {
     width: 150px;
   }
+  .hover-content{
+    flex-direction: column;
+    margin-top:1rem
+  }
 }
