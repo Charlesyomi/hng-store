@@ -33,7 +33,13 @@ const NavLink: React.FC<NavLinkProps> = ({ href, name, icon }) => {
   const isActive = pathname === href;
 
   return (
-    <Link key={name} href={href} className={styles.categoryLink}>
+    <Link
+      key={name}
+      href={href}
+      className={`${styles.categoryLink} ${
+        isActive ? styles.activeCategory : ""
+      }`}
+    >
       <span>
         <Image alt="" src={icon} className={styles.categoryIcon} />
       </span>
