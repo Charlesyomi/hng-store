@@ -166,4 +166,17 @@
   .card {
     width: 150px;
   }
+  .hoverContent{
+    flex-direction: column;
+    margin-top:1rem;
+    gap:8px;
+    padding:0.4rem 0;
+    align-items: stretch;
+    justify-content:unset;
+  }
+  .addToCart,
+  .favoriteButton{
+    font-size:12px;
+    padding: 4px 6px;
+  }
 }
